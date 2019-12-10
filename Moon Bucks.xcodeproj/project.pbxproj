@@ -17,6 +17,7 @@
 		4E7C42C4238F29A30039D28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C42C3238F29A30039D28E /* Assets.xcassets */; };
 		4E7C42C7238F29A30039D28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E7C42C5238F29A30039D28E /* LaunchScreen.storyboard */; };
 		4E8396A623A01EB30006E0A2 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8396A523A01EB30006E0A2 /* OrderViewModel.swift */; };
+		4E8396A823A024D70006E0A2 /* AddCoffeeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8396A723A024D70006E0A2 /* AddCoffeeOrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4E7C42C6238F29A30039D28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E7C42C8238F29A30039D28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E8396A523A01EB30006E0A2 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		4E8396A723A024D70006E0A2 /* AddCoffeeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				4E8396A523A01EB30006E0A2 /* OrderViewModel.swift */,
+				4E8396A723A024D70006E0A2 /* AddCoffeeOrderViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1D0D95238F357C00E69BBF /* Order.swift in Sources */,
+				4E8396A823A024D70006E0A2 /* AddCoffeeOrderViewModel.swift in Sources */,
 				4E7C42BB238F299E0039D28E /* AppDelegate.swift in Sources */,
 				4E7C42BD238F299E0039D28E /* SceneDelegate.swift in Sources */,
 				4E1D0D8D238F2BBE00E69BBF /* OrdersTableViewController.swift in Sources */,

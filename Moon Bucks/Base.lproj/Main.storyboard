@@ -70,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="421"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yDq-je-bXE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoffeeType" id="yDq-je-bXE">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yDq-je-bXE" id="ksM-jV-GSr">
@@ -79,15 +79,11 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4MK-jw-UKW" id="5G8-zq-CTc"/>
+                                    <outlet property="delegate" destination="4MK-jw-UKW" id="XfC-gc-pNk"/>
+                                </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="STy-Bu-bbr">
-                                <rect key="frame" x="104" y="507" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t74-JX-eso">
                                 <rect key="frame" x="107" y="595" width="200" height="34"/>
                                 <constraints>
@@ -107,24 +103,29 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="STy-Bu-bbr" firstAttribute="top" secondItem="NLR-aa-5pk" secondAttribute="bottom" constant="30" id="6eD-JP-lXR"/>
                             <constraint firstItem="uGW-rf-Bbd" firstAttribute="top" secondItem="t74-JX-eso" secondAttribute="bottom" constant="8" id="Hho-NR-q7L"/>
                             <constraint firstItem="NLR-aa-5pk" firstAttribute="trailing" secondItem="5xO-Nn-lap" secondAttribute="trailing" id="IDE-di-87v"/>
+                            <constraint firstItem="5xO-Nn-lap" firstAttribute="bottom" secondItem="uGW-rf-Bbd" secondAttribute="bottom" constant="137" id="Lsp-3a-f51"/>
                             <constraint firstItem="NLR-aa-5pk" firstAttribute="height" secondItem="mXx-5u-Qe9" secondAttribute="height" multiplier="0.5" id="dnE-7v-xrL"/>
                             <constraint firstItem="uGW-rf-Bbd" firstAttribute="centerX" secondItem="mXx-5u-Qe9" secondAttribute="centerX" id="i5d-a1-HxO"/>
                             <constraint firstItem="t74-JX-eso" firstAttribute="centerX" secondItem="mXx-5u-Qe9" secondAttribute="centerX" id="pGi-yk-y8S"/>
                             <constraint firstItem="NLR-aa-5pk" firstAttribute="leading" secondItem="5xO-Nn-lap" secondAttribute="leading" id="qpg-Jg-PFq"/>
-                            <constraint firstItem="t74-JX-eso" firstAttribute="top" secondItem="STy-Bu-bbr" secondAttribute="bottom" constant="57" id="tgP-t2-c9v"/>
                             <constraint firstItem="NLR-aa-5pk" firstAttribute="top" secondItem="5xO-Nn-lap" secondAttribute="top" id="v11-TQ-emb"/>
                             <constraint firstItem="NLR-aa-5pk" firstAttribute="width" secondItem="mXx-5u-Qe9" secondAttribute="width" id="xng-VL-TSO"/>
-                            <constraint firstItem="STy-Bu-bbr" firstAttribute="centerX" secondItem="mXx-5u-Qe9" secondAttribute="centerX" id="xsi-ki-UJe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5xO-Nn-lap"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add A New Order" id="ak6-Mc-m3U">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="rbG-Z3-DzI"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="rbG-Z3-DzI">
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="4MK-jw-UKW" id="HXg-Ax-Sio"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Eez-Z6-2QI"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="NLR-aa-5pk" id="E0S-xb-IG6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcJ-ay-yEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
