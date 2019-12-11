@@ -12,6 +12,8 @@ struct AddCoffeeOrderViewModel {
     
     var name: String?
     var email: String?
+    var selectedType: String?
+    var selectdSize: String?
     
     var types: [String] {
         
